@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tJD-wU-n39">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestBluetooth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="g4f-lq-YUi"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="ugJ-s6-IHE" kind="show" identifier="gotoBLlist" id="HJr-le-YST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2850.4000000000001" y="38.23088455772114"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="9X2-Cl-JqX">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ugJ-s6-IHE" customClass="BluetoothListViewController" customModule="TestBluetooth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RdL-e1-ZTw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ViM-vk-G7f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mpv-ZU-xCr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nOb-Z4-qis">
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2H4-TZ-J0u">
+                                <rect key="frame" x="177.5" y="323" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Cdp-Mt-w0Z"/>
+                                    <constraint firstAttribute="width" constant="20" id="l8i-zB-vTL"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bB-bd-f2Q">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0cV-wi-31P"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="IUO-zh-KFU">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="buttonScanBluetoothDevice:" destination="ugJ-s6-IHE" id="zkJ-fV-K93"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ViM-vk-G7f" firstAttribute="top" secondItem="9bB-bd-f2Q" secondAttribute="bottom" id="24d-vA-vcV"/>
+                            <constraint firstItem="2H4-TZ-J0u" firstAttribute="centerY" secondItem="mpv-ZU-xCr" secondAttribute="centerY" id="64r-Nf-bYN"/>
+                            <constraint firstItem="9bB-bd-f2Q" firstAttribute="top" secondItem="nOb-Z4-qis" secondAttribute="bottom" id="IQP-hw-Kw3"/>
+                            <constraint firstItem="2H4-TZ-J0u" firstAttribute="centerX" secondItem="mpv-ZU-xCr" secondAttribute="centerX" id="J6R-w2-6pF"/>
+                            <constraint firstAttribute="trailing" secondItem="9bB-bd-f2Q" secondAttribute="trailing" id="Ji8-gO-dEC"/>
+                            <constraint firstAttribute="trailing" secondItem="nOb-Z4-qis" secondAttribute="trailing" id="MWD-JB-wp6"/>
+                            <constraint firstItem="9bB-bd-f2Q" firstAttribute="leading" secondItem="mpv-ZU-xCr" secondAttribute="leading" id="No8-tL-5Mp"/>
+                            <constraint firstItem="nOb-Z4-qis" firstAttribute="leading" secondItem="mpv-ZU-xCr" secondAttribute="leading" id="W34-BU-Yua"/>
+                            <constraint firstItem="nOb-Z4-qis" firstAttribute="top" secondItem="RdL-e1-ZTw" secondAttribute="bottom" id="XHL-Dr-QJD"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="aVd-sQ-Wmi"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bbScan" destination="IUO-zh-KFU" id="Izs-ce-xX2"/>
+                        <outlet property="bluetoothListTableView" destination="nOb-Z4-qis" id="BWW-OC-I1A"/>
+                        <outlet property="indicator" destination="2H4-TZ-J0u" id="qEm-bh-xsb"/>
+                        <segue destination="Gc9-54-Few" kind="show" identifier="gotoBLDeviceConfig" id="q6G-mA-txe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTh-0n-49Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3719.1999999999998" y="37.331334332833585"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="AxC-hC-nLQ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Gc9-54-Few" customClass="BTDeviceConfigViewController" customModule="TestBluetooth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YOu-dt-QPZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="HJc-VH-ObV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8uW-7c-1WW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9E-mt-dLk">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="c0H-r7-XcB"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="XQi-J6-pTM">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cGn-mN-bXP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bfh-gJ-Iqh">
+                                <rect key="frame" x="177.5" y="323" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="U0g-ps-hK3"/>
+                                    <constraint firstAttribute="width" constant="20" id="cyN-xK-Ydc"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c9E-mt-dLk" firstAttribute="leading" secondItem="8uW-7c-1WW" secondAttribute="leading" id="5Ch-a5-Fli"/>
+                            <constraint firstItem="bfh-gJ-Iqh" firstAttribute="centerY" secondItem="8uW-7c-1WW" secondAttribute="centerY" id="7zF-mX-Va0"/>
+                            <constraint firstItem="cGn-mN-bXP" firstAttribute="top" secondItem="YOu-dt-QPZ" secondAttribute="bottom" id="LHj-yg-g4G"/>
+                            <constraint firstItem="c9E-mt-dLk" firstAttribute="top" secondItem="cGn-mN-bXP" secondAttribute="bottom" id="OzW-cc-NjV"/>
+                            <constraint firstAttribute="trailing" secondItem="c9E-mt-dLk" secondAttribute="trailing" id="QOY-h0-ja0"/>
+                            <constraint firstItem="cGn-mN-bXP" firstAttribute="leading" secondItem="8uW-7c-1WW" secondAttribute="leading" id="Rrf-E6-V59"/>
+                            <constraint firstItem="bfh-gJ-Iqh" firstAttribute="centerX" secondItem="8uW-7c-1WW" secondAttribute="centerX" id="TAi-1U-Gnc"/>
+                            <constraint firstItem="HJc-VH-ObV" firstAttribute="top" secondItem="c9E-mt-dLk" secondAttribute="bottom" id="oK7-6F-IFP"/>
+                            <constraint firstAttribute="trailing" secondItem="cGn-mN-bXP" secondAttribute="trailing" id="otk-yF-Wnx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="bF1-Go-tmJ"/>
+                    <connections>
+                        <outlet property="bbConnect" destination="XQi-J6-pTM" id="v5F-Bz-yff"/>
+                        <outlet property="indicator" destination="bfh-gJ-Iqh" id="1ou-OY-soT"/>
+                        <outlet property="tableViewService" destination="cGn-mN-bXP" id="8EC-On-ezn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3S1-tC-N5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4628" y="40.929535232383813"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="jOk-fy-tlU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tJD-wU-n39" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="4aH-ly-f4o"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3h1-eZ-hOS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BZc-d9-2wF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnB-Hq-8vP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911.2" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
